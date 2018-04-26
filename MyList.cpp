@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//constructor
 template <typename dType>
 MyList<dType>::MyList()
 {
@@ -14,6 +15,7 @@ MyList<dType>::MyList()
     len = 0;
 }
 
+//destructor
 template <typename dType>
 MyList<dType>::~MyList()
 {
@@ -23,6 +25,7 @@ MyList<dType>::~MyList()
     delete myList;
 }
 
+//get element from list
 template <typename dType>
 typename MyList<dType>::node *MyList<dType>::elementAt(int index)
 {
@@ -49,6 +52,7 @@ typename MyList<dType>::node *MyList<dType>::elementAt(int index)
     }
 }
 
+//add element on front of the list
 template <typename dType>
 void MyList<dType>::pushFront(dType val)
 {
@@ -69,6 +73,7 @@ void MyList<dType>::pushFront(dType val)
     len++;
 }
 
+//add element to the end of list
 template <typename dType>
 void MyList<dType>::pushBack(dType val)
 {
@@ -89,6 +94,7 @@ void MyList<dType>::pushBack(dType val)
     len++;
 }
 
+//delete element from the front of list
 template <typename dType>
 void MyList<dType>::popFront()
 {
@@ -107,6 +113,7 @@ void MyList<dType>::popFront()
     len--;
 }
 
+//delete element from end of the list
 template <typename dType>
 void MyList<dType>::popBack()
 {
@@ -125,12 +132,15 @@ void MyList<dType>::popBack()
     len--;
 }
 
+//return list length
 template <typename dType>
 int MyList<dType>::length()
 {
     return len;
 }
 
+
+//return value of element
 template <typename dType>
 dType MyList<dType>::valAt(int index)
 {
@@ -138,6 +148,8 @@ dType MyList<dType>::valAt(int index)
     return temp->val;
 }
 
+
+//insert element before element number index
 template <typename dType>
 void MyList<dType>::insertEl(int index, dType val)
 {
@@ -159,6 +171,7 @@ void MyList<dType>::insertEl(int index, dType val)
     len++;
 }
 
+//erase element
 template <typename dType>
 void MyList<dType>::eraseEl(int index)
 {
